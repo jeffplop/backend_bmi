@@ -1,12 +1,9 @@
 package com.example.backend_bmi.controller;
 
 import com.example.backend_bmi.model.Post;
-import com.example.backend_bmi.repository.PostRepository;
+import com.example.backend_bmi.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
@@ -14,10 +11,20 @@ import java.util.List;
 public class PostController {
 
     @Autowired
-    private PostRepository postRepository;
+    private PostService postService;
 
     @GetMapping
     public List<Post> getAllPosts() {
-        return postRepository.findAll();
+        return postService.obtenerTodos();
+    }
+
+    @GetMapping("/category/{id}")
+    public List<Post> getPostsByCategory(@PathVariable Integer id) {
+        return postService.obtenerPorCategoria(id);
+    }
+
+    @PostMapping
+    public Post createPost(@RequestBody Post post) {
+        return postService.guardarManual(post);
     }
 }

@@ -1,0 +1,42 @@
+[
+  {
+    "userId": 1,
+    "title": "Manual Indicador LP7516B",
+    "body": "Indicador de pesaje con módulo Bluetooth 4.0 integrado para conexión inalámbrica.",
+    "pdfUrl": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+    "version": "2.0",
+    "fecha": "10/04/2024",
+    "fabricante": "Excell",
+    "categoryId": 1
+  },
+  {
+    "userId": 1,
+    "title": "Manual Indicador WaterProof",
+    "body": "Equipo con protección IP68, ideal para ambientes húmedos y lavados frecuentes.",
+    "pdfUrl": "http://10.0.2.2:8080/manuales/prueba.pdf",
+    "version": "1.5",
+    "fecha": "05/02/2024",
+    "fabricante": "Excell",
+    "categoryId": 2
+  },
+  {
+    "userId": 1,
+    "title": "Manual Indicador LP7516",
+    "body": "Versión estándar LCD. Guía de configuración básica y calibración de cero y span.",
+    "pdfUrl": "http://10.0.2.2:8080/manuales/prueba.pdf",
+    "version": "1.2",
+    "fecha": "12/11/2023",
+    "fabricante": "Excell",
+    "categoryId": 3
+  },
+  {
+    "userId": 1,
+    "title": "Manual Indicador FB530",
+    "body": "Indicador con impresora térmica incorporada. Configuración de formatos de etiqueta.",
+    "pdfUrl": "",
+    "version": "3.0",
+    "fecha": "22/08/2023",
+    "fabricante": "Excell",
+    "categoryId": 4
+  }
+]

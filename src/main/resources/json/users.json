@@ -1,0 +1,16 @@
+[
+  {
+    "nombre": "Administrador",
+    "email": "admin@bmi.cl",
+    "password": "Admin123!",
+    "direccion": "Oficina Central",
+    "role": "ADMIN"
+  },
+  {
+    "nombre": "Jeff Ploop",
+    "email": "jeff@bmi.cl",
+    "password": "Jeff123!",
+    "direccion": "Av. Siempreviva 742",
+    "role": "USER"
+  }
+]
