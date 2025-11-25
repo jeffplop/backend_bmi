@@ -14,17 +14,17 @@ public class PostController {
     private PostService postService;
 
     @GetMapping
-    public List<Post> getAllPosts() {
+    public List<Post> getAll() {
         return postService.obtenerTodos();
     }
 
     @GetMapping("/category/{id}")
-    public List<Post> getPostsByCategory(@PathVariable Integer id) {
+    public List<Post> getByCategory(@PathVariable Integer id) {
         return postService.obtenerPorCategoria(id);
     }
 
     @PostMapping
-    public Post createPost(@RequestBody Post post) {
+    public Post create(@RequestBody Post post) {
         return postService.guardarManual(post);
     }
 }
