@@ -8,4 +8,6 @@ import java.util.List;
 @Repository
 public interface PostRepository extends JpaRepository<Post, Integer> {
     List<Post> findByCategoryId(Integer categoryId);
+    
+    List<Post> findByTitleContainingIgnoreCaseOrBodyContainingIgnoreCase(String title, String body);
 }

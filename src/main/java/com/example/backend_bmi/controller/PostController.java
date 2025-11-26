@@ -14,17 +14,32 @@ public class PostController {
     private PostService postService;
 
     @GetMapping
-    public List<Post> getAll() {
+    public List<Post> getAllPosts() {
         return postService.obtenerTodos();
     }
 
+    @GetMapping("/search")
+    public List<Post> searchPosts(@RequestParam String query) {
+        return postService.buscarPorTexto(query);
+    }
+
     @GetMapping("/category/{id}")
-    public List<Post> getByCategory(@PathVariable Integer id) {
+    public List<Post> getPostsByCategory(@PathVariable Integer id) {
         return postService.obtenerPorCategoria(id);
     }
 
     @PostMapping
-    public Post create(@RequestBody Post post) {
+    public Post createPost(@RequestBody Post post) {
         return postService.guardarManual(post);
+    }
+
+    @PutMapping("/{id}")
+    public Post updatePost(@PathVariable Integer id, @RequestBody Post post) {
+        return postService.actualizarManual(id, post);
+    }
+
+    @DeleteMapping("/{id}")
+    public boolean deletePost(@PathVariable Integer id) {
+        return postService.eliminarManual(id);
     }
 }

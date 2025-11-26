@@ -31,6 +31,26 @@ public class UserService {
         return null;
     }
 
+    public User actualizar(Integer id, User userDetails) {
+        return userRepository.findById(id).map(user -> {
+            user.setNombre(userDetails.getNombre());
+            user.setEmail(userDetails.getEmail());
+            user.setTelefono(userDetails.getTelefono());
+            if(userDetails.getPassword() != null && !userDetails.getPassword().isEmpty()){
+                user.setPassword(userDetails.getPassword());
+            }
+            return userRepository.save(user);
+        }).orElse(null);
+    }
+
+    public boolean eliminar(Integer id) {
+        if(userRepository.existsById(id)){
+            userRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
+    
     public void borrarTodo() {
         userRepository.deleteAll();
     }
