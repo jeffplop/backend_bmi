@@ -1,46 +1,46 @@
 [
   {
     "userId": 1,
-    "title": "Manual Indicador LP 7516",
-    "body": "Manual de usuario completo para el indicador de pesaje LP 7516. Incluye configuración y calibración.",
-    "pdfUrl": "http://10.0.2.2:8080/manuales/lp7516.pdf",
-    "version": "1.0",
-    "fecha": "24/11/2025",
-    "fabricante": "Locosc",
-    "isPremium": false,
-    "categoryId": 1
-  },
-  {
-    "userId": 1,
-    "title": "Manual Online (Ejemplo Web)",
-    "body": "Acceso directo al manual alojado en Manualzilla/Archive.org.",
-    "pdfUrl": "https://archive.org/details/manualzilla-id-6867480",
-    "version": "Web",
-    "fecha": "Online",
-    "fabricante": "Genérico",
-    "isPremium": true,
-    "categoryId": 3
-  },
-  {
-    "userId": 1,
-    "title": "Manual Indicador LP7516B (Bluetooth)",
-    "body": "Guía especial para la versión con módulo Bluetooth integrado.",
-    "pdfUrl": "",
+    "title": "Manual Indicador LP7516B (Premium)",
+    "body": "Configuración Bluetooth completa y diagramas de placa madre.",
+    "pdfUrl": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
     "version": "2.0",
     "fecha": "10/04/2024",
     "fabricante": "Excell",
     "isPremium": true,
+    "categoryId": 1
+  },
+  {
+    "userId": 1,
+    "title": "Manual WaterProof (Gratis)",
+    "body": "Guía básica de protección IP68 para ambientes húmedos.",
+    "pdfUrl": "http://10.0.2.2:8080/manuales/lp7516.pdf",
+    "version": "1.5",
+    "fecha": "05/02/2024",
+    "fabricante": "Excell",
+    "isPremium": false,
+    "categoryId": 2
+  },
+  {
+    "userId": 1,
+    "title": "Manual ZT410 (Premium)",
+    "body": "Manual de servicio técnico avanzado para impresoras industriales.",
+    "pdfUrl": "",
+    "version": "3.0",
+    "fecha": "22/08/2023",
+    "fabricante": "Zebra",
+    "isPremium": true,
     "categoryId": 3
   },
   {
     "userId": 1,
-    "title": "Manual FB530 (Impresora)",
-    "body": "Configuración de formatos de impresión y etiquetas.",
+    "title": "Manual FB530",
+    "body": "Configuración de formatos de etiquetas y calibración de cabezal.",
     "pdfUrl": "",
-    "version": "3.5",
-    "fecha": "22/08/2023",
+    "version": "1.0",
+    "fecha": "15/01/2024",
     "fabricante": "Excell",
     "isPremium": false,
-    "categoryId": 2
+    "categoryId": 3
   }
 ]

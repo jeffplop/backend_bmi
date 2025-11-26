@@ -3,14 +3,21 @@
     "nombre": "Administrador",
     "email": "admin@bmi.cl",
     "password": "Admin123!",
-    "direccion": "Oficina Central",
+    "telefono": "+56911111111",
     "role": "ADMIN"
   },
   {
     "nombre": "Jeff Ploop",
     "email": "jeff@bmi.cl",
     "password": "Jeff123!",
-    "direccion": "Av. Siempreviva 742",
+    "telefono": "+56922222222",
     "role": "USER"
+  },
+  {
+    "nombre": "Socio Premium",
+    "email": "premium@bmi.cl",
+    "password": "Premium123!",
+    "telefono": "+56933333333",
+    "role": "PREMIUM"
   }
 ]
