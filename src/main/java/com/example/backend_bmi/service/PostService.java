@@ -17,6 +17,11 @@ public class PostService {
         return postRepository.findAll();
     }
 
+    public Post obtenerPorId(Integer id) {
+        return postRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Manual no encontrado con ID: " + id));
+    }
+
     public List<Post> obtenerPorCategoria(Integer categoryId) {
         List<Post> posts = postRepository.findByCategoryId(categoryId);
         if (posts.isEmpty()) {
