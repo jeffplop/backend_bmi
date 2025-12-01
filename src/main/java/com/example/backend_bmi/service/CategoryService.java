@@ -37,8 +37,4 @@ public class CategoryService {
             throw new ResourceNotFoundException("Categoria no encontrada con ID: " + id);
         }
     }
-
-    public void borrarTodo() {
-        categoryRepository.deleteAll();
-    }
 }
