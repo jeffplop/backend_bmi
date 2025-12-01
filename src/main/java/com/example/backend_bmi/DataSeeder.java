@@ -22,36 +22,34 @@ public class DataSeeder {
     @Bean
     CommandLineRunner initDatabase(PostRepository postRepo, UserRepository userRepo, CategoryRepository catRepo) {
         return args -> {
-            postRepo.deleteAll();
-            userRepo.deleteAll();
-            catRepo.deleteAll();
-
-            catRepo.save(new Category(null, "Bluetooth", "Conectividad inalámbrica"));
-            catRepo.save(new Category(null, "Indicadores", "Pantallas de pesaje"));
-            catRepo.save(new Category(null, "Impresoras", "Equipos de etiquetado"));
-
             ObjectMapper mapper = new ObjectMapper();
+            
             TypeReference<List<User>> typeReferenceUsers = new TypeReference<List<User>>(){};
             TypeReference<List<Post>> typeReferencePosts = new TypeReference<List<Post>>(){};
-            
+            TypeReference<List<Category>> typeReferenceCategories = new TypeReference<List<Category>>(){};
+
             InputStream inputStreamUsers = TypeReference.class.getResourceAsStream("/json/users.json");
             InputStream inputStreamPosts = TypeReference.class.getResourceAsStream("/json/posts.json");
+            InputStream inputStreamCategories = TypeReference.class.getResourceAsStream("/json/categories.json");
 
             try {
-                if (inputStreamUsers != null) {
-                    List<User> users = mapper.readValue(inputStreamUsers, typeReferenceUsers);
-                    userRepo.saveAll(users);
-                    System.out.println("--- Usuarios cargados desde JSON: " + users.size() + " ---");
+                if (inputStreamCategories != null && catRepo.count() == 0) {
+                    List<Category> categories = mapper.readValue(inputStreamCategories, typeReferenceCategories);
+                    catRepo.saveAll(categories);
                 }
 
-                if (inputStreamPosts != null) {
+                if (inputStreamUsers != null && userRepo.count() == 0) {
+                    List<User> users = mapper.readValue(inputStreamUsers, typeReferenceUsers);
+                    userRepo.saveAll(users);
+                }
+
+                if (inputStreamPosts != null && postRepo.count() == 0) {
                     List<Post> posts = mapper.readValue(inputStreamPosts, typeReferencePosts);
                     postRepo.saveAll(posts);
-                    System.out.println("--- Manuales cargados desde JSON: " + posts.size() + " ---");
                 }
 
             } catch (IOException e){
-                System.out.println("ERROR al cargar JSON: " + e.getMessage());
+                e.printStackTrace();
             }
         };
     }

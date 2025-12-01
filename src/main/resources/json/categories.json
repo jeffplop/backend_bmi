@@ -1,0 +1,18 @@
+[
+  {
+    "nombre": "Bluetooth",
+    "descripcion": "Módulos y adaptadores de conexión inalámbrica"
+  },
+  {
+    "nombre": "Indicadores",
+    "descripcion": "Pantallas y visores de peso industrial"
+  },
+  {
+    "nombre": "Impresoras",
+    "descripcion": "Dispositivos de etiquetado y reportes"
+  },
+  {
+    "nombre": "Celdas de Carga",
+    "descripcion": "Sensores de fuerza y peso"
+  }
+]
